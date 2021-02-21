@@ -1,5 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "./styles/fonts.css";
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 400;
+}
 
 @import "./styles/main.css";

@@ -98,10 +98,10 @@ module.exports = {
         test: /\.css$/,
         use: cssLoaders()
       },
-      {
-        test: /\.(s[ac]ss)$/,
-        use: cssLoaders('sass-loader')
-      },
+      // {
+      //   test: /\.(s[ac]ss)$/,
+      //   use: cssLoaders('sass-loader')
+      // },
       {
         test: /\.(png|jpg|svg|webp)$/,
         use: ['file-loader']
