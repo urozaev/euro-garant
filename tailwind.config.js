@@ -70,7 +70,7 @@ module.exports = {
     plugin(({ addBase }) => {
       addBase({
         p: {
-          'font-size': '20px',
+          'font-size': '21px',
           'line-height': '34px',
           'margin-bottom': '7px',
         },
@@ -85,9 +85,9 @@ module.exports = {
           'line-height': '72px',
         },
         h3: {
-          'font-size': '20px',
+          'font-size': '21px',
           'font-weight': 700,
-          'line-height': '28px',
+          'line-height': '34px',
         },
         h4: {
           'font-size': '18px',

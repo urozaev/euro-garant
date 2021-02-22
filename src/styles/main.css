@@ -1,7 +1,49 @@
 .hero {
-  grid-template-rows: repeat(2, minmax(0, auto)) 120px;
+  grid-template-rows: repeat(2, minmax(0, auto)) 114px;
 }
 
 .hero-bg {
   background-image: url('../assets/img/bg.webp');
+}
+
+.hero-phone {
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-btn {
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 20px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #258AFF;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0px 4px 8px rgba(0, 45, 178, 0.4);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.nav-link {
+  width: 20%;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #001234;
+  letter-spacing: .5px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #fff;
+  background-color: #263652;
 }
