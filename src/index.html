@@ -10,7 +10,7 @@
   <main>
     <div class="hero-bg h-screen bg-no-repeat bg-cover">
       <section class="hero grid content-between h-full relative container mx-auto text-white">
-        <div class="flex items-center justify-between pt-12">
+        <header class="flex items-center justify-between pt-12">
           <picture class="block">
             <source type="image/webp" srcset="assets/img/logo.webp">
             <img class="w-24" src="assets/img/logo.png" alt="Логотип компании">
@@ -25,7 +25,7 @@
             </div>
             <span class="pl-8 text-lg">Звонок бесплатный</span>
           </div>
-        </div>
+        </header>
 
         <div>
           <h1>Профессиональная гидроизоляция</h1>
@@ -146,14 +146,78 @@
         <h2>Заинтересовались <br> нашими услугами?</h2>
         <p class="mt-8">Мы привели не полный перечень услуг, поэтому оставьте свою заявку и свами 
           свяжется наш консультат и расскажет подробности и отвтеит на все ваши вопросы.</p>
-          <form class="grid grid-cols-4 auto-rows-auto gap-x-4 mt-14">
-            <input required id="name-input" class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваше имя">
-            <input required id="phone-input" class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="tel" min="1" maxlength="11" placeholder="Ваш телефон">
-            <input class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваш комментарий">
-            <button class="btn" type="submit">Получить консультацию</button>
-          </form>
+        <form class="grid grid-cols-4 auto-rows-auto gap-x-4 mt-14">
+          <input required id="name-input" class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваше имя">
+          <input required id="phone-input" class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="tel" min="1" maxlength="11" placeholder="Ваш телефон">
+          <input class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваш комментарий">
+          <button class="btn hover:bg-blue-300 duration-100" type="submit">Получить консультацию</button>
+        </form>
       </section>
     </div>
+    <footer class="text-white bg-blue-500">
+      <div class="footer container grid grid-cols-4 gap-x-24 py-28 mx-auto">
+        <div>
+          <a class="block mb-6" href="/">
+            <picture class="block">
+              <source type="image/webp" srcset="assets/img/logo.webp">
+              <img class="w-20 h-20" src="assets/img/logo.png" alt="Логотип компании">
+            </picture>
+          </a>
+          <span>Вы можете заказать у нас услуги по обследованию, проектированию и ремонтно-восстановительных работ.</span>
+        </div>
+        <div>
+          <h5 class="mb-5 text-gray-200">Услуги</h5>
+          <a href="#0" class="block mb-3 hover:text-blue duration-100">Гидроизоляция</a>
+          <a href="#0" class="block mb-3 hover:text-blue duration-100">Ремонт и восстановление</a>
+          <a href="#0" class="block mb-3 hover:text-blue duration-100">Инъектирование</a>
+          <a href="#0" class="block mb-3 hover:text-blue duration-100">Усиление</a>
+          <a href="#0" class="block hover:text-blue duration-100">Обследование</a>
+        </div>
+        <div>
+          <h5 class="mb-5 text-gray-200">О нас</h5>
+          <a href="#0" class="block mb-3 hover:text-blue duration-100">Наши работы</a>
+          <a href="#0" class="block hover:text-blue duration-100">Советы</a>
+        </div>
+        <div>
+          <h5 class="mb-5 text-gray-200">Контакты</h5>
+          <address class="not-italic">
+            <span>Feel free to get in touch with us via phone or send us a message.</span>
+            <a class="block mt-5 text-blue hover:text-blue-300" href="tel:89991107905">+7 (999) 110-79-05</a>
+            <a class="block mt-2 text-blue hover:text-blue-300" href="mailto:urozaev.developer@gmail.com">urozaev.developer@gmail.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="container mx-auto flex justify-between py-5 border-t border-gray-600">
+        <span>© Копирайт 2021</span>
+        <ul class="flex">
+          <li class="mr-3">
+            <a class="block" target="_blank" href="https://vk.com/">
+              <svg class="w-6 h-6 text-white rounded-full hover:text-blue-200 duration-100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-current" d="M11.9146 23.8292C18.4949 23.8292 23.8292 18.4949 23.8292 11.9146C23.8292 5.33436 18.4949 0 11.9146 0C5.33436 0 0 5.33436 0 11.9146C0 18.4949 5.33436 23.8292 11.9146 23.8292Z"/>
+                <path fill="#001234" fill-rule="evenodd" clip-rule="evenodd" d="M11.4645 17.1403H12.3996C12.3996 17.1403 12.6821 17.1093 12.8263 16.9538C12.959 16.8111 12.9548 16.543 12.9548 16.543C12.9548 16.543 12.9365 15.2882 13.5189 15.1034C14.093 14.9214 14.8302 16.3162 15.6116 16.8525C16.2024 17.2584 16.6514 17.1694 16.6514 17.1694L18.7407 17.1403C18.7407 17.1403 19.8337 17.0729 19.3154 16.2136C19.273 16.1433 19.0136 15.5779 17.762 14.4162C16.452 13.2002 16.6274 13.3969 18.2055 11.2936C19.1665 10.0127 19.5508 9.23067 19.4308 8.89573C19.3163 8.57673 18.6095 8.66104 18.6095 8.66104L16.257 8.6757C16.257 8.6757 16.0827 8.65191 15.9533 8.72922C15.8269 8.80504 15.7456 8.98175 15.7456 8.98175C15.7456 8.98175 15.3733 9.97297 14.8767 10.8159C13.8292 12.5947 13.4104 12.6886 13.2392 12.5781C12.841 12.3207 12.9404 11.544 12.9404 10.9922C12.9404 9.26848 13.2018 8.54975 12.4313 8.3637C12.1755 8.30189 11.9874 8.26112 11.3334 8.25453C10.4941 8.24582 9.78361 8.25708 9.38134 8.45418C9.11373 8.58522 8.90729 8.87726 9.03303 8.89404C9.18849 8.91485 9.54064 8.98897 9.72733 9.2432C9.96839 9.57113 9.95989 10.3077 9.95989 10.3077C9.95989 10.3077 10.0984 12.3369 9.63642 12.589C9.31933 12.7619 8.88435 12.4089 7.95048 10.7951C7.47196 9.96851 7.11069 9.05481 7.11069 9.05481C7.11069 9.05481 7.04103 8.88405 6.91678 8.79273C6.76598 8.68207 6.55529 8.64681 6.55529 8.64681L4.31989 8.66147C4.31989 8.66147 3.98432 8.67081 3.86113 8.81673C3.75154 8.9465 3.85242 9.21496 3.85242 9.21496C3.85242 9.21496 5.60251 13.3094 7.58411 15.3728C9.4011 17.2645 11.4645 17.1403 11.4645 17.1403Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="mr-3">
+            <a class="block" target="_blank" href="https://www.instagram.com/?hl=ru">
+              <svg class="w-6 h-6 text-white rounded-full hover:text-blue-200 duration-100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M15.5346 6.36798H8.40076C7.26209 6.36798 6.33569 7.29438 6.33569 8.43305V15.5669C6.33569 16.7056 7.26209 17.6322 8.40076 17.6322H15.5346C16.6733 17.6322 17.6 16.7058 17.6 15.5669V8.43305C17.6 7.29438 16.6736 6.36798 15.5346 6.36798ZM11.9677 15.7082C9.92315 15.7082 8.25968 14.0448 8.25968 12C8.25968 9.95545 9.92315 8.29198 11.9677 8.29198C14.0125 8.29198 15.6759 9.95545 15.6759 12C15.6759 14.0445 14.0122 15.7082 11.9677 15.7082ZM14.9176 8.18131C14.9176 8.66505 15.3112 9.05865 15.7952 9.05865C16.2789 9.05865 16.6725 8.66505 16.6725 8.18131C16.6725 7.69758 16.2789 7.30398 15.7952 7.30398C15.3112 7.30398 14.9176 7.69758 14.9176 8.18131Z" />
+                <path class="fill-current" d="M11.9677 9.85895C10.7875 9.85895 9.82642 10.8195 9.82642 11.9997C9.82642 13.1805 10.7875 14.1413 11.9677 14.1413C13.1485 14.1413 14.1088 13.1805 14.1088 11.9997C14.1088 10.8197 13.1483 9.85895 11.9677 9.85895Z" />
+                <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M0 11.9677C0 5.3584 5.3584 0 11.9677 0C18.5771 0 23.9355 5.3584 23.9355 11.9677C23.9355 18.5771 18.5771 23.9355 11.9677 23.9355C5.3584 23.9355 0 18.5771 0 11.9677ZM15.5347 19.1989C17.5376 19.1989 19.1667 17.5699 19.1667 15.5669V8.43307C19.1667 6.4304 17.5376 4.80107 15.5347 4.80107H8.40082C6.39816 4.80107 4.76882 6.4304 4.76882 8.43307V15.5669C4.76882 17.5699 6.39816 19.1989 8.40082 19.1989H15.5347Z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="block" target="_blank" href="https://ru-ru.facebook.com/">
+              <svg class="w-6 h-6 text-white rounded-full hover:text-blue-200 duration-100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-current" d="M11.9146 23.8292C18.4949 23.8292 23.8292 18.4949 23.8292 11.9146C23.8292 5.33436 18.4949 0 11.9146 0C5.33436 0 0 5.33436 0 11.9146C0 18.4949 5.33436 23.8292 11.9146 23.8292Z"/>
+                <path fill="#001234" d="M14.9098 12.381H12.7838V20.1698H9.56273V12.381H8.03076V9.64378H9.56273V7.87245C9.56273 6.60576 10.1644 4.62225 12.8125 4.62225L15.1985 4.63224V7.28923H13.4673C13.1833 7.28923 12.784 7.4311 12.784 8.03535V9.64632H15.1913L14.9098 12.381Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
