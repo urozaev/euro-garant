@@ -16,3 +16,20 @@ phoneInput.oninput = () => {
 nameInput.oninput = () => {
   nameInput.value = nameInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
 }
+
+const navigation = document.querySelector("#navigation");
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.scrollY;
+  let docHeight = document.body.offsetHeight;
+  let winHeight = window.innerHeight;
+  let scrollPercent = scrollTop / (docHeight - winHeight);
+  let scrollPercentRounded = Math.round(scrollPercent * 100);
+  if (scrollPercentRounded > 41) {
+    navigation.classList.remove('container', 'h-28');
+    navigation.classList.add('h-14');
+  } else {
+    navigation.classList.remove('h-14');
+    navigation.classList.add('container', 'h-28');
+  }
+});

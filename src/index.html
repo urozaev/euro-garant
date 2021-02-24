@@ -7,9 +7,9 @@
   <title>Евро-Гарант</title>
 </head>
 <body>
-  <main>
-    <div class="hero-bg h-screen bg-no-repeat bg-cover">
-      <section class="hero grid content-between h-full relative container mx-auto text-white">
+  <main class="relative">
+    <div class="hero-bg -mb-28 h-screen bg-no-repeat bg-cover">
+      <section class="hero grid content-between h-full container mx-auto text-white">
         <header class="flex items-center justify-between pt-12">
           <picture class="block">
             <source type="image/webp" srcset="assets/img/logo.webp">
@@ -37,16 +37,15 @@
             Заказать услугу
           </button>
         </div>
-
-        <nav class="flex">
-          <a class="active nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Главная</a>
-          <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Услуги</a>
-          <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Наши работы</a>
-          <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Советы</a>
-          <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Контакты</a>
-        </nav>
       </section>
     </div>
+    <nav id="navigation" class="container mx-auto flex sticky top-0 h-28">
+      <a class="active nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Главная</a>
+      <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Услуги</a>
+      <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Наши работы</a>
+      <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Советы</a>
+      <a class="nav-link flex items-center justify-center uppercase hover:bg-blue-400 duration-100" href="#">Контакты</a>
+    </nav>
     <section class="container mx-auto my-28 text-center">
       <h2>Услуги</h2>
       <p class="max-w-5xl mx-auto mt-6">Все работы в проводятся только профессиональным оборудованием с использованием 
