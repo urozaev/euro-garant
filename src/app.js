@@ -17,6 +17,8 @@ nameInput.oninput = () => {
   nameInput.value = nameInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
 }
 
+
+// Sticky header
 const navigation = document.querySelector("#navigation");
 
 window.addEventListener("scroll", () => {
@@ -26,10 +28,10 @@ window.addEventListener("scroll", () => {
   let scrollPercent = scrollTop / (docHeight - winHeight);
   let scrollPercentRounded = Math.round(scrollPercent * 100);
   if (scrollPercentRounded > 41) {
-    navigation.classList.remove('container', 'h-28');
-    navigation.classList.add('h-14');
+    navigation.classList.add('fixed','h-14');
   } else {
-    navigation.classList.remove('h-14');
-    navigation.classList.add('container', 'h-28');
+    if (navigation.classList.contains('fixed', 'h-14')) {
+      navigation.classList.remove('fixed', 'h-14');
+    }
   }
 });
