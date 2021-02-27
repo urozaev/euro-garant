@@ -32,10 +32,10 @@ const cssLoaders = extra => {
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        // publicPath: '' // - фича для корректной работы npm run build
-        publicPath: (resourcePath, context) => {
-          return path.relative(path.dirname(resourcePath), context) + '/';
-        },
+        publicPath: '' // - фича для корректной работы npm run build
+        // publicPath: (resourcePath, context) => {
+        //   return path.relative(path.dirname(resourcePath), context) + '/';
+        // },
       },
     },
     'css-loader',
