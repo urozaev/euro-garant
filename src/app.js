@@ -28,10 +28,10 @@ window.addEventListener("scroll", () => {
   let scrollPercent = scrollTop / (docHeight - winHeight);
   let scrollPercentRounded = Math.round(scrollPercent * 100);
   if (scrollPercentRounded > 41) {
-    navigation.classList.add('fixed','h-14');
+    navigation.classList.add('fixed','h-14', 'bg-blue-500');
   } else {
-    if (navigation.classList.contains('fixed', 'h-14')) {
-      navigation.classList.remove('fixed', 'h-14');
+    if (navigation.classList.contains('fixed', 'h-14', 'bg-blue-500')) {
+      navigation.classList.remove('fixed', 'h-14', 'bg-blue-500');
     }
   }
 });
