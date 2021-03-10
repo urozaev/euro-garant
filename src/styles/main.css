@@ -51,3 +51,9 @@
 .footer {
   grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
 }
+
+.breadcrumb-item + .breadcrumb-item:before {
+  display: inline-block;
+  content: ">";
+  font-weight: 700;
+}

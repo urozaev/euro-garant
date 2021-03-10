@@ -69,7 +69,15 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: './index.html',
+      template: path.resolve(__dirname, './src/index.html'), // шаблон
+      filename: 'index.html',
+      minify: {
+        collapseWhitespace: !isDev
+      }
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, './src/services.html'), // шаблон
+      filename: 'services.html',
       minify: {
         collapseWhitespace: !isDev
       }
