@@ -82,6 +82,13 @@ module.exports = {
         collapseWhitespace: !isDev
       }
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, './src/services-detail.html'), // шаблон
+      filename: 'services-detail.html',
+      minify: {
+        collapseWhitespace: !isDev
+      }
+    }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
