@@ -38,3 +38,15 @@ if (navigation) {
   });
 };
 
+// Collapse navigation
+let numOfClicks = 0;
+const collapseBtns = Array.from(document.querySelectorAll('.collapse-btn'));
+const collapseContent = (el) => {
+  // collapseBtns.find(item => !item.nextElementSibling.classList.contains('sr-only').classList.add('sr-only'));
+  el.nextElementSibling.classList.toggle('sr-only');
+}
+
+collapseBtns.forEach(item => {
+  item.addEventListener('click', () => collapseContent(item))
+});
+
