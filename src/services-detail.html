@@ -186,7 +186,7 @@
               </p>
               <button
                 type="button"
-                class="mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
+                class="open-btn mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
                 Заказать
               </button>
             </div>
@@ -205,7 +205,7 @@
               </p>
               <button
                 type="button"
-                class="mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
+                class="open-btn mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
                 Заказать
               </button>
             </div>
@@ -224,7 +224,7 @@
               </p>
               <button
                 type="button"
-                class="mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
+                class="open-btn mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
                 Заказать
               </button>
             </div>
@@ -243,7 +243,7 @@
               </p>
               <button
                 type="button"
-                class="mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
+                class="open-btn mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
                 Заказать
               </button>
             </div>
@@ -262,7 +262,7 @@
               </p>
               <button
                 type="button"
-                class="mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
+                class="open-btn mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
                 Заказать
               </button>
             </div>
@@ -281,7 +281,7 @@
               </p>
               <button
                 type="button"
-                class="mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
+                class="open-btn mt-2 text-base text-blue font-semibold leading-5 hover:border-b border-dashed hover:text-blue-300 outline-none focus:outline-none duration-100">
                 Заказать
               </button>
             </div>
@@ -369,5 +369,32 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="modal fixed top-0 left-0 w-full h-full outline-none fade" id="modal" tabindex="-1" role="dialog">
+      <div class="relative flex flex-col h-full justify-center w-auto pointer-events-none max-w-xl -my-8 mx-auto px-4 sm:px-0" role="document">
+        <div class="relative flex flex-col w-full py-12 pointer-events-auto bg-white border border-gray-300 rounded-lg">
+          <div class="flex flex-col items-center px-14 mb-7 rounded-t">
+            <h3 class="mb-0 font-semibold leading-normal">Мы Вам сейчас перезвоним</h3>
+            <span>Наш специалист перезвонит вам в течении 10 минут</span>
+            <button id="close-btn" type="button" class="absolute top-4 right-4 p-1 focus:outline-none text-gray-200 hover:text-blue-300" data-dismiss="modal">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M0.292894 0.292893C0.683419 -0.097631 1.31658 -0.097631 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292894 1.70711C-0.0976301 1.31658 -0.0976301 0.683418 0.292894 0.292893Z" />
+                <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C14.0976 0.683418 14.0976 1.31658 13.7071 1.70711L1.70711 13.7071C1.31658 14.0976 0.683418 14.0976 0.292893 13.7071C-0.097631 13.3166 -0.097631 12.6834 0.292893 12.2929L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="relative flex px-14">
+            <form class="flex flex-col w-full">
+              <input required id="name-modal" class="border border-gray-100 rounded py-5 px-4 mb-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваше имя">
+              <input required id="phone-modal" class="border border-gray-100 rounded py-5 px-4 mb-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="tel" min="1" maxlength="11" placeholder="Ваш телефон">
+              <input class="border border-gray-100 rounded py-5 px-4 mb-7 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваш комментарий">
+              <button id="act-btn" type="submit" class="btn hover:bg-blue-300 duration-100">Получить консультацию</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-backdrop" class="fixed bg-black top-0 left-0 z-0 opacity-0 fade"></div>
 </body>
 </html>

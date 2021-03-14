@@ -3,6 +3,8 @@ import "./style.css";
 
 const nameInput = document.getElementById('name-input');
 const phoneInput = document.getElementById('phone-input');
+const nameModalInput = document.getElementById('name-modal');
+const phoneModalInput = document.getElementById('phone-modal');
 
 // Form validation
 phoneInput.oninput = () => {
@@ -16,6 +18,20 @@ phoneInput.oninput = () => {
 nameInput.oninput = () => {
   nameInput.value = nameInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
 }
+
+phoneModalInput.oninput = () => {
+  phoneModalInput.value = phoneModalInput.value.replace(/[^0-9]/g, "");
+
+  if (phoneModalInput.value.length > phoneModalInput.maxLength) {
+    phoneModalInput.value = phoneModalInput.value.slice(0, phoneModalInput.maxLength);
+  }
+}
+  
+nameModalInput.oninput = () => {
+  nameModalInput.value = nameModalInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
+}
+
+// TODO добавить дизейбл на кнопку при невалидной форме
 
 
 // Sticky header
@@ -39,7 +55,6 @@ if (navigation) {
 };
 
 // Collapse navigation
-let numOfClicks = 0;
 const collapseBtns = Array.from(document.querySelectorAll('.collapse-btn'));
 const collapseContent = (el) => {
   // collapseBtns.find(item => !item.nextElementSibling.classList.contains('sr-only').classList.add('sr-only'));
@@ -49,4 +64,30 @@ const collapseContent = (el) => {
 collapseBtns.forEach(item => {
   item.addEventListener('click', () => collapseContent(item))
 });
+
+
+// modal window
+const modalBtns = Array.from(document.querySelectorAll('.open-btn'));
+const modal = document.getElementById('modal');
+const backdrop = document.getElementById('modal-backdrop');
+const actionBtn = document.getElementById('act-btn');
+const closeBtn = document.getElementById('close-btn');
+
+const openModal = () => {
+  modal.classList.remove('fade');
+  backdrop.classList.remove('fade');
+  backdrop.classList.add('invert');
+}
+
+const closeModal = () => {
+  modal.classList.add('fade');
+  backdrop.classList.add('fade');
+  backdrop.classList.remove('invert');
+}
+
+if (modalBtns && modal && backdrop) {
+  modalBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+}
 
