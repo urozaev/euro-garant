@@ -56,4 +56,31 @@
   display: inline-block;
   content: ">";
   font-weight: 700;
+  color: #001234;
+}
+
+.sub-services {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+/* modal */
+.modal {
+  z-index: 1072;
+}
+
+.invert {
+  opacity: .5;
+  z-index: 1040;
+}
+
+.fade {
+  z-index: -100;
+  opacity: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#modal-backdrop {
+  width: 100vw;
+  height: 100vh;
 }
