@@ -7,28 +7,36 @@ const nameModalInput = document.getElementById('name-modal');
 const phoneModalInput = document.getElementById('phone-modal');
 
 // Form validation
-phoneInput.oninput = () => {
-  phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
+if(phoneInput) {
+  phoneInput.oninput = () => {
+    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
 
-  if (phoneInput.value.length > phoneInput.maxLength) {
-    phoneInput.value = phoneInput.value.slice(0, phoneInput.maxLength);
+    if (phoneInput.value.length > phoneInput.maxLength) {
+      phoneInput.value = phoneInput.value.slice(0, phoneInput.maxLength);
+    }
   }
 }
-  
-nameInput.oninput = () => {
-  nameInput.value = nameInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
-}
 
-phoneModalInput.oninput = () => {
-  phoneModalInput.value = phoneModalInput.value.replace(/[^0-9]/g, "");
-
-  if (phoneModalInput.value.length > phoneModalInput.maxLength) {
-    phoneModalInput.value = phoneModalInput.value.slice(0, phoneModalInput.maxLength);
+if(nameInput) {
+  nameInput.oninput = () => {
+    nameInput.value = nameInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
   }
 }
-  
-nameModalInput.oninput = () => {
-  nameModalInput.value = nameModalInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
+
+if(phoneModalInput) {
+  phoneModalInput.oninput = () => {
+    phoneModalInput.value = phoneModalInput.value.replace(/[^0-9]/g, "");
+
+    if (phoneModalInput.value.length > phoneModalInput.maxLength) {
+      phoneModalInput.value = phoneModalInput.value.slice(0, phoneModalInput.maxLength);
+    }
+  }
+}
+
+if(nameModalInput) {
+  nameModalInput.oninput = () => {
+    nameModalInput.value = nameModalInput.value.replace(/[^а-яА-ЯёЁa-zA-Z]/g, "");
+  }
 }
 
 // TODO добавить дизейбл на кнопку при невалидной форме
