@@ -84,3 +84,14 @@
   width: 100vw;
   height: 100vh;
 }
+
+.article h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.article p,
+.article span {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
