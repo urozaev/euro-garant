@@ -103,6 +103,13 @@ module.exports = {
         collapseWhitespace: !isDev
       }
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, './src/contacts.html'), // шаблон
+      filename: 'contacts.html',
+      minify: {
+        collapseWhitespace: !isDev
+      }
+    }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
