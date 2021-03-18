@@ -68,40 +68,66 @@
 
   <section class="container mx-auto mt-14 mb-28 text-center">
     <h1 class="text-6xl text-left">Контакты</h1>
-    <address class="mt-10">
-      <table class="text-left not-italic">
-        <tbody>
-          <tr class="font-semibold">
-            <td>Телефон:</td>
-            <td>E-mail:</td>
-          </tr>
-          <tr class="text-blue">
-            <td><a href="tel:+78412255222">+7 (8412) 255-222</a></td>
-            <td><a href="mailto:evrogarant58@mail.ru">evrogarant58@mail.ru</a></td>
-          </tr>
-          <tr class="font-semibold">
-            <td>Адрес:</td>
-          </tr>
-          <tr>
-            <td>г. Пенза, ул. Бийская, 3Б <br>
-              (административное здание)<br>2 этаж
-            </td>
-            <td></td>
-          </tr>
-          <tr class="font-semibold">
-            <td>Режим работы:</td>
-          </tr>
-          <tr>
-            <td>Понедельник — Пятница:</td>
-            <td>8:00 — 17:00</td>
-          </tr>
-          <tr>
-            <td>Суббота:</td>
-            <td>по предварительной договорённости</td>
-          </tr>
-        </tbody>
-      </table>
-    </address>
+    <div class="flex justify-between mt-10">
+      <address>
+        <table class="text-left not-italic">
+          <tbody>
+            <tr class="font-semibold">
+              <td>Телефон:</td>
+              <td>E-mail:</td>
+            </tr>
+            <tr class="text-blue">
+              <td class="py-2"><a href="tel:+78412255222">+7 (8412) 255-222</a></td>
+              <td class="py-2"><a href="mailto:evrogarant58@mail.ru">evrogarant58@mail.ru</a></td>
+            </tr>
+            <tr class="font-semibold">
+              <td>Адрес:</td>
+            </tr>
+            <tr>
+              <td class="py-2">г. Пенза, ул. Бийская, 3Б <br>
+                (административное здание)<br>2 этаж
+              </td>
+            </tr>
+            <tr class="font-semibold">
+              <td class="py-2">Режим работы:</td>
+            </tr>
+            <tr>
+              <td>Понедельник — Пятница:</td>
+              <td>8:00 — 17:00</td>
+            </tr>
+            <tr>
+              <td class="pt-1">Суббота:</td>
+              <td class="pt-1">по предварительной договорённости</td>
+            </tr>
+          </tbody>
+        </table>
+      </address>
+      <form class="flex flex-col items-center text-center w-2/5 mr-28">
+        <h3 class="font-semibold">Форма обратной связи</h3>
+        <input required
+          type="text"
+          id="name-input"
+          placeholder="Ваше имя"
+          class="mt-5 w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
+        />
+        <input required 
+          type="tel"
+          id="phone-input"
+          placeholder="Ваш телефон"
+          class="mt-5 w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
+          min="1"
+          maxlength="11"
+        />
+        <input type="text" 
+          placeholder="Ваш комментарий"
+          class="mt-5 w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
+        />
+        <p class="w-9/12 text-sm font-normal mt-5">Нажимая «‎Отправить»‎, вы соглашаетесь с
+          <a class="text-blue" href="https://vbankcenter.ru/_next/static/files/655e9604788e5bd879cbd6a0f4cf2951.pdf">обработкой персональных данных</a>
+        </p>
+        <button type="submit" class="w-9/12 btn mt-2 py-3.5 px-14 font-semibold focus:outline-none rounded hover:bg-blue-300 duration-100">Отправить</button>
+      </form>
+    </div>
   </section>
 
   <footer class="text-white bg-blue-500">
