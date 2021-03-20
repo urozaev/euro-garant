@@ -1,7 +1,8 @@
 import "tailwindcss/tailwind.css";
 import "./style.css";
 
-const mediaQuery = window.matchMedia('(min-width: 1200px)').matches
+const mediaQuery = window.matchMedia('(min-width: 1024px)').matches
+const mediaMobileQuery = window.matchMedia('(max-width: 1024px)').matches
 const mainPage = document.getElementById("main-page");
 const nameInput = document.getElementById('name-input');
 const phoneInput = document.getElementById('phone-input');
@@ -121,3 +122,17 @@ if (modalBtns && modal && backdrop) {
   backdrop.addEventListener('click', closeModal);
 }
 
+if (mediaMobileQuery) {
+  const menuCloseBtn = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const burger = document.getElementById('burger');
+
+  const closeMenu = () => {
+    mobileMenu.classList.add('hidden');
+  }
+  const openMenu = () => {
+    mobileMenu.classList.remove('hidden');
+  }
+  menuCloseBtn.addEventListener('click', closeMenu);
+  burger.addEventListener('click', openMenu);
+}
