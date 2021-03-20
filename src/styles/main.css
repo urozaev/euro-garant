@@ -6,6 +6,12 @@
   background-image: url('../assets/img/bg.webp');
 }
 
+#main-page .first-hidden {
+  opacity: 0;
+  display: none;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 .hero-phone {
   margin-left: .5rem;
   font-size: 1.5rem;
@@ -48,8 +54,10 @@
   background-color: #263652;
 }
 
-.footer {
-  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+@media screen and (min-width: 1280px) {
+  .footer {
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  }
 }
 
 .breadcrumb-item + .breadcrumb-item:before {
