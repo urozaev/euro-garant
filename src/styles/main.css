@@ -48,8 +48,10 @@
   background-color: #263652;
 }
 
-.footer {
-  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+@media screen and (min-width: 1280px) {
+  .footer {
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  }
 }
 
 .breadcrumb-item + .breadcrumb-item:before {
@@ -94,4 +96,12 @@
 .article span {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #main-page .first-hidden {
+    opacity: 0;
+    display: none;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
 }

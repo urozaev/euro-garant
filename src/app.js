@@ -1,6 +1,9 @@
 import "tailwindcss/tailwind.css";
 import "./style.css";
 
+const mediaQuery = window.matchMedia('(min-width: 1024px)').matches
+const mediaMobileQuery = window.matchMedia('(max-width: 1024px)').matches
+const mainPage = document.getElementById("main-page");
 const nameInput = document.getElementById('name-input');
 const phoneInput = document.getElementById('phone-input');
 const nameModalInput = document.getElementById('name-modal');
@@ -41,28 +44,48 @@ if(nameModalInput) {
 
 // TODO добавить дизейбл на кнопку при невалидной форме
 
+if (mainPage && mediaQuery) {
+  // Sticky header
+  const header = document.getElementById("header");
+  const headerLogo = document.getElementById("header-logo");
+  const headerPhone = document.getElementById("header-phone");
+  const navigation = document.getElementById("navigation-list");
 
-// Sticky header
-const navigation = document.querySelector("#navigation");
+  
 
-if (navigation) {
-  window.addEventListener("scroll", () => {
-    let scrollTop = window.scrollY;
-    let docHeight = document.body.offsetHeight;
-    let winHeight = window.innerHeight;
-    let scrollPercent = scrollTop / (docHeight - winHeight);
-    let scrollPercentRounded = Math.round(scrollPercent * 100);
-    if (scrollPercentRounded > 41) {
-      navigation.classList.add('fixed','h-14', 'bg-blue-500');
-    } else {
-      if (navigation.classList.contains('fixed', 'h-14', 'bg-blue-500')) {
-        navigation.classList.remove('fixed', 'h-14', 'bg-blue-500');
+  if (header) {
+    header.classList.remove('sticky');
+    navigation.classList.remove('w-3/4');
+    navigation.classList.add('w-full');
+
+    window.addEventListener("scroll", () => {
+      let scrollTop = window.scrollY;
+      let docHeight = document.body.offsetHeight;
+      let winHeight = window.innerHeight;
+      let scrollPercent = scrollTop / (docHeight - winHeight);
+      let scrollPercentRounded = Math.round(scrollPercent * 100);
+      if (scrollPercentRounded > 41) {
+        header.classList.add('fixed', 'bg-blue-500');
+        headerLogo.classList.remove('first-hidden');
+        headerPhone.classList.remove('first-hidden');
+        navigation.classList.add('w-3/4');
+        navigation.classList.remove('w-full');
+      } else {
+        if (header.classList.contains('fixed', 'bg-blue-500')) {
+          header.classList.remove('fixed', 'bg-blue-500');
+          headerLogo.classList.add('first-hidden');
+          headerPhone.classList.add('first-hidden');
+        }
+        if (navigation.classList.contains('w-3/4')) {
+          navigation.classList.remove('w-3/4');
+          navigation.classList.add('w-full');
+        }
       }
-    }
-  });
+    });
+  };
 };
 
-// Collapse navigation
+// Collapse navigation services
 const collapseBtns = Array.from(document.querySelectorAll('.collapse-btn'));
 const collapseContent = (el) => {
   // collapseBtns.find(item => !item.nextElementSibling.classList.contains('sr-only').classList.add('sr-only'));
@@ -99,3 +122,17 @@ if (modalBtns && modal && backdrop) {
   backdrop.addEventListener('click', closeModal);
 }
 
+if (mediaMobileQuery) {
+  const menuCloseBtn = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const burger = document.getElementById('burger');
+
+  const closeMenu = () => {
+    mobileMenu.classList.add('hidden');
+  }
+  const openMenu = () => {
+    mobileMenu.classList.remove('hidden');
+  }
+  menuCloseBtn.addEventListener('click', closeMenu);
+  burger.addEventListener('click', openMenu);
+}
