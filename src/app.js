@@ -8,6 +8,7 @@ const nameInput = document.getElementById('name-input');
 const phoneInput = document.getElementById('phone-input');
 const nameModalInput = document.getElementById('name-modal');
 const phoneModalInput = document.getElementById('phone-modal');
+const header = document.getElementById("header");
 
 // Form validation
 if(phoneInput) {
@@ -46,7 +47,6 @@ if(nameModalInput) {
 
 if (mainPage && mediaQuery) {
   // Sticky header
-  const header = document.getElementById("header");
   const headerLogo = document.getElementById("header-logo");
   const headerPhone = document.getElementById("header-phone");
   const navigation = document.getElementById("navigation-list");
@@ -88,7 +88,6 @@ if (mainPage && mediaQuery) {
 // Collapse navigation services
 const collapseBtns = Array.from(document.querySelectorAll('.collapse-btn'));
 const collapseContent = (el) => {
-  // collapseBtns.find(item => !item.nextElementSibling.classList.contains('sr-only').classList.add('sr-only'));
   el.nextElementSibling.classList.toggle('sr-only');
 }
 
@@ -126,6 +125,7 @@ if (mediaMobileQuery) {
   const menuCloseBtn = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
   const burger = document.getElementById('burger');
+  const otherServices = document.getElementById('other-service');
 
   const closeMenu = () => {
     mobileMenu.classList.add('hidden');
@@ -133,6 +133,11 @@ if (mediaMobileQuery) {
   const openMenu = () => {
     mobileMenu.classList.remove('hidden');
   }
+
+  if (mainPage) {
+    mainPage.prepend(header);
+  }
+
   menuCloseBtn.addEventListener('click', closeMenu);
   burger.addEventListener('click', openMenu);
 }

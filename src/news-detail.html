@@ -15,7 +15,7 @@
           <path d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z"></path>
         </svg>
       </button>
-      <a id="header-logo" class="first-hidden block py-2" href="./index.html">
+      <a id="header-logo" class="first-hidden block py-2 mr-5" href="./index.html">
         <picture class="block">
           <source type="image/webp" srcset="assets/img/logo.webp">
           <img class="w-14 lg:w-16" src="assets/img/logo.png" alt="Логотип компании">
@@ -26,14 +26,14 @@
         <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./index.html">Главная</a>
         </li>
-        <li class="active nav-link hover:bg-blue-400 duration-100">
+        <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./services.html">Услуги</a>
         </li>
         <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="#">Наши работы</a>
         </li>
-        <li class="nav-link hover:bg-blue-400 duration-100">
-          <a class="flex items-center justify-center h-full uppercase" href="./news.html">Советы</a>
+        <li class="active nav-link hover:bg-blue-400 duration-100">
+          <a class="flex items-center justify-center h-full uppercase" href="#0">Советы</a>
         </li>
         <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./contacts.html">Контакты</a>
@@ -108,8 +108,8 @@
       </nav>
     </div>
 
-    <div class="container flex mx-auto mt-14 mb-28">
-      <aside class="realtive flex-none w-72">
+    <div class="container flex md:flex-row flex-col-reverse mx-auto mt-14 mb-14 md:mb-28 sm:px-0 px-4">
+      <aside class="realtive flex-none mt-9 md:mt-0 md:w-72">
         <nav class="sticky top-24 bg-gray-50">
           <ul>
             <li>
@@ -227,9 +227,9 @@
           </ul>
         </nav>
       </aside>
-      <article class="article flex-grow ml-10">
+      <article class="article flex-grow md:ml-10">
         <div class="relative z-20 flex items-center justify-center h-96 bg-blue-500 rounded-md">
-          <h1 class="relative z-30 text-5xl text-center text-white">Поверхностная гидроизоляция фасадов</h1>
+          <h1 class="relative z-30 px-2 text-3xl sm:text-4xl xl:text-5xl text-center text-white">Поверхностная гидроизоляция фасадов</h1>
           <picture class="absolute top-0 left-0 h-full opacity-30">
             <img class="object-cover h-full rounded-md" src="https://penetron-penza.ru/sites/default/files/styles/service/public/services/dsc1272_0.jpg?itok=AOZ8WylE" alt="Фон">
           </picture>
@@ -248,11 +248,11 @@
     </div>
 
     <div class="bg-blue-100">
-      <section class="container mx-auto py-28 text-center">
-        <h2>Заинтересовались <br> нашими услугами?</h2>
-        <p class="mt-8">Мы привели не полный перечень услуг, поэтому оставьте свою заявку и свами 
+      <section class="container mx-auto md:py-28 py-12 text-center px-4 sm:px-0">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl break-words">Заинтересовались <br> нашими услугами?</h2>
+        <p class="mt-8 text-lg sm:text-xl">Мы привели не полный перечень услуг, поэтому оставьте свою заявку и свами 
           свяжется наш консультат и расскажет подробности и отвтеит на все ваши вопросы.</p>
-        <form class="grid grid-cols-4 auto-rows-auto gap-x-4 mt-14">
+        <form class="grid xl:grid-cols-4 auto-rows-auto xl:gap-x-4 gap-y-5 mt-14">
           <input required id="name-input" class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваше имя">
           <input required id="phone-input" class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="tel" min="1" maxlength="11" placeholder="Ваш телефон">
           <input class="border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваш комментарий">
@@ -330,7 +330,7 @@
     <div class="modal fixed top-0 left-0 w-full h-full outline-none opacity-100 duration-300 fade" id="modal" tabindex="-1" role="dialog">
       <div class="relative flex flex-col h-full justify-center w-auto pointer-events-none max-w-xl -my-8 mx-auto px-4 sm:px-0" role="document">
         <div class="relative flex flex-col w-full py-12 pointer-events-auto bg-white border border-gray-300 rounded-lg">
-          <div class="flex flex-col items-center px-14 mb-7 rounded-t">
+          <div class="flex flex-col items-center px-5 sm:px-14 mb-7 rounded-t">
             <h3 class="mb-0 font-semibold leading-normal">Мы Вам сейчас перезвоним</h3>
             <span>Наш специалист перезвонит вам в течении 10 минут</span>
             <button id="close-btn" type="button" class="absolute top-4 right-4 p-1 focus:outline-none text-gray-200 hover:text-blue-300" data-dismiss="modal">
@@ -340,7 +340,7 @@
               </svg>
             </button>
           </div>
-          <div class="relative flex px-14">
+          <div class="relative flex px-5 sm:px-14">
             <form class="flex flex-col w-full">
               <input required id="name-modal" class="border border-gray-100 rounded py-5 px-4 mb-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваше имя">
               <input required id="phone-modal" class="border border-gray-100 rounded py-5 px-4 mb-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="tel" min="1" maxlength="11" placeholder="Ваш телефон">
