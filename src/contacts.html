@@ -17,7 +17,7 @@
           <path d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z"></path>
         </svg>
       </button>
-      <a id="header-logo" class="first-hidden block py-2" href="./index.html">
+      <a id="header-logo" class="first-hidden block py-2 mr-5" href="./index.html">
         <picture class="block">
           <source type="image/webp" srcset="assets/img/logo.webp">
           <img class="w-14 lg:w-16" src="assets/img/logo.png" alt="Логотип компании">
@@ -28,7 +28,7 @@
         <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./index.html">Главная</a>
         </li>
-        <li class="active nav-link hover:bg-blue-400 duration-100">
+        <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./services.html">Услуги</a>
         </li>
         <li class="nav-link hover:bg-blue-400 duration-100">
@@ -37,7 +37,7 @@
         <li class="nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./news.html">Советы</a>
         </li>
-        <li class="nav-link hover:bg-blue-400 duration-100">
+        <li class="active nav-link hover:bg-blue-400 duration-100">
           <a class="flex items-center justify-center h-full uppercase" href="./contacts.html">Контакты</a>
         </li>
       </ul>
@@ -107,9 +107,9 @@
     </nav>
   </div>
 
-  <section class="container mx-auto mt-14 mb-28 text-center">
+  <section class="container mx-auto mt-14 mb-28 px-4 sm:px-0">
     <h1 class="text-6xl text-left">Контакты</h1>
-    <div class="flex justify-between mt-10">
+    <div class="flex justify-between xl:flex-row flex-col mt-10">
       <address>
         <table class="text-left not-italic">
           <tbody>
@@ -143,30 +143,30 @@
           </tbody>
         </table>
       </address>
-      <form class="flex flex-col items-center text-center w-2/5 mr-28">
+      <form class="flex flex-col xl:items-center xl:text-center w-full sm:w-3/4 xl:w-2/5 xl:mt-0 mt-9 xl:mr-28">
         <h3 class="font-semibold">Форма обратной связи</h3>
         <input required
           type="text"
           id="name-input"
           placeholder="Ваше имя"
-          class="mt-5 w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
+          class="mt-5 xl:w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
         />
         <input required 
           type="tel"
           id="phone-input"
           placeholder="Ваш телефон"
-          class="mt-5 w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
+          class="mt-5 xl:w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
           min="1"
           maxlength="11"
         />
         <input type="text" 
           placeholder="Ваш комментарий"
-          class="mt-5 w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
+          class="mt-5 xl:w-9/12 border border-gray-100 rounded py-5 px-4 placeholder-gray-500 focus:border-blue-300 outline-none"
         />
-        <p class="w-9/12 text-sm font-normal mt-5">Нажимая «‎Отправить»‎, вы соглашаетесь с
+        <p class="xl:w-9/12 text-sm font-normal mt-5">Нажимая «‎Отправить»‎, вы соглашаетесь с
           <a class="text-blue" href="https://vbankcenter.ru/_next/static/files/655e9604788e5bd879cbd6a0f4cf2951.pdf">обработкой персональных данных</a>
         </p>
-        <button type="submit" class="w-9/12 btn mt-2 py-3.5 px-14 font-semibold focus:outline-none rounded hover:bg-blue-300 duration-100">Отправить</button>
+        <button type="submit" class="xl:w-9/12 btn mt-2 py-3.5 px-14 font-semibold focus:outline-none rounded hover:bg-blue-300 duration-100">Отправить</button>
       </form>
     </div>
   </section>

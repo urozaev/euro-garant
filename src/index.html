@@ -9,8 +9,8 @@
 <body>
   <main id="main-page">
     <div class="hero-bg h-screen bg-no-repeat bg-cover">
-      <div class="hero grid content-between h-full container mx-auto text-white">
-        <div class="flex items-center justify-between pt-12">
+      <div class="hero lg:grid flex flex-col justify-center content-between h-full container mx-auto text-white">
+        <div class="hidden lg:flex items-center justify-between pt-12">
           <picture class="block">
             <source type="image/webp" srcset="assets/img/logo.webp">
             <img class="w-32" src="assets/img/logo.png" alt="Логотип компании">
@@ -27,9 +27,9 @@
           </div>
         </div>
 
-        <section>
-          <h1 class="lg:text-7xl text-6xl">Профессиональная гидроизоляция</h1>
-          <p class="mt-10 mb-0">Продажа материалов и выполнение работ <br>
+        <section class="px-4 sm:px-0">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl break-words">Профессиональная гидроизоляция</h1>
+          <p class="mt-10 mb-0 sm:text-xl text-lg">Продажа материалов и выполнение работ <br>
             по гидроизоляции в Пензе и Пензенской области</p>
           <button
             class="hero-btn open-btn btn hover:bg-blue-300 duration-100"
@@ -45,7 +45,7 @@
                 <path d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z"></path>
               </svg>
             </button>
-            <a id="header-logo" class="first-hidden block py-2" href="./index.html">
+            <a id="header-logo" class="first-hidden block py-2 mr-5" href="./index.html">
               <picture class="block">
                 <source type="image/webp" srcset="assets/img/logo.webp">
                 <img class="w-14 lg:w-16" src="assets/img/logo.png" alt="Логотип компании">
@@ -53,10 +53,10 @@
             </a>
       
             <ul id="navigation-list" class="hidden lg:flex w-3/4">
-              <li class="nav-link hover:bg-blue-400 duration-100">
-                <a class="flex items-center justify-center h-full uppercase" href="./index.html">Главная</a>
-              </li>
               <li class="active nav-link hover:bg-blue-400 duration-100">
+                <a class="flex items-center justify-center h-full uppercase" href="#0">Главная</a>
+              </li>
+              <li class="nav-link hover:bg-blue-400 duration-100">
                 <a class="flex items-center justify-center h-full uppercase" href="./services.html">Услуги</a>
               </li>
               <li class="nav-link hover:bg-blue-400 duration-100">
@@ -117,7 +117,7 @@
       </div>
     </div>
     <section class="container mx-auto md:mt-14 mt-9 md:mb-28 mb-16 text-center sm:px-0 px-4">
-      <h1 class="lg:text-7xl text-5xl">Услуги</h1>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Услуги</h1>
       <p class="max-w-5xl mx-auto mt-6 text-lg sm:text-xl">Все работы в проводятся только профессиональным оборудованием с использованием 
         только качественных и проверенных материалов.</p>
       <ul class="grid xl:grid-cols-3 sm:grid-cols-2 gap-x-5 gap-y-12 mt-12">
@@ -211,8 +211,8 @@
       </ul>
     </section>
     <div class="bg-blue-100">
-      <section class="container mx-auto md:py-28 py-12 text-center">
-        <h2 class="lg:text-7xl text-5xl">Заинтересовались <br> нашими услугами?</h2>
+      <section class="container mx-auto md:py-28 py-12 text-center px-4 sm:px-0">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl break-words">Заинтересовались <br> нашими услугами?</h2>
         <p class="mt-8 text-lg sm:text-xl">Мы привели не полный перечень услуг, поэтому оставьте свою заявку и свами 
           свяжется наш консультат и расскажет подробности и отвтеит на все ваши вопросы.</p>
         <form class="grid xl:grid-cols-4 auto-rows-auto xl:gap-x-4 gap-y-5 mt-14">
@@ -292,7 +292,7 @@
   <div class="modal fixed top-0 left-0 w-full h-full outline-none opacity-100 duration-300 fade" id="modal" tabindex="-1" role="dialog">
     <div class="relative flex flex-col h-full justify-center w-auto pointer-events-none max-w-xl -my-8 mx-auto px-4 sm:px-0" role="document">
       <div class="relative flex flex-col w-full py-12 pointer-events-auto bg-white border border-gray-300 rounded-lg">
-        <div class="flex flex-col items-center px-14 mb-7 rounded-t">
+        <div class="flex flex-col items-center px-5 sm:px-14 mb-7 rounded-t">
           <h3 class="mb-0 font-semibold leading-normal">Мы Вам сейчас перезвоним</h3>
           <span>Наш специалист перезвонит вам в течении 10 минут</span>
           <button id="close-btn" type="button" class="absolute top-4 right-4 p-1 focus:outline-none text-gray-200 hover:text-blue-300" data-dismiss="modal">
@@ -302,7 +302,7 @@
             </svg>
           </button>
         </div>
-        <div class="relative flex px-14">
+        <div class="relative flex px-5 sm:px-14">
           <form class="flex flex-col w-full">
             <input required id="name-modal" class="border border-gray-100 rounded py-5 px-4 mb-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="text" placeholder="Ваше имя">
             <input required id="phone-modal" class="border border-gray-100 rounded py-5 px-4 mb-4 placeholder-gray-500 focus:border-blue-300 outline-none" type="tel" min="1" maxlength="11" placeholder="Ваш телефон">
